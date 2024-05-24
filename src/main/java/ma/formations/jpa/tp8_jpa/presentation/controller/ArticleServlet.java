@@ -80,7 +80,7 @@ public class ArticleServlet extends HttpServlet {
             throws ServletException, IOException {
         Long id = Long.valueOf(request.getParameter("id"));
         articleDao.delete(id);
-        listArticles(request, response); // Forward to the listArticles method after deletion
+        listArticles(request, response);
     }
 
     private void updateArticle(HttpServletRequest request, HttpServletResponse response)
@@ -111,7 +111,7 @@ public class ArticleServlet extends HttpServlet {
 
         articleDao.save(article);
 
-        response.sendRedirect("articles.do"); // Redirect to the ArticleServlet
+        response.sendRedirect("articles.do");
     }
 
     private void saveNewArticle(HttpServletRequest request, HttpServletResponse response)

@@ -7,7 +7,7 @@
             <th scope="col">Description</th>
             <th scope="col">Quantité</th>
             <th scope="col">Prix</th>
-            <th scope="col">Actions</th> <!-- New column for actions -->
+            <th scope="col">Actions</th>
         </tr>
         </thead>
         <tbody>
@@ -18,13 +18,10 @@
                 <td>${article.quantite}</td>
                 <td>${article.price}</td>
                 <td>
-                    <!-- Delete button -->
-                    <!-- Delete button -->
                     <form action="articles.do?action=deleteArticle" method="post" style="display: inline;">
                         <input type="hidden" name="id" value="${article.id}">
                         <button type="submit" class="btn btn-danger">X</button>
                     </form>
-                    <!-- Modify icon -->
                     <a href="articles.do?action=updateArticle&id=${article.id}">
                         <button class="btn btn-success">Modify</button>
                     </a>
@@ -33,6 +30,5 @@
         </c:forEach>
         </tbody>
     </table>
-    <!-- Create Article button -->
     <a href="articles.do?action=addArticle" class="btn btn-primary" style="margin-top: 20px;">Create Article</a>
 </div>

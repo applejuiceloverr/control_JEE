@@ -24,6 +24,6 @@ public class ChangePasswordServlet extends HttpServlet {
 
         service.changePassword(username, newPassword);
 
-        response.sendRedirect("login.do"); // Redirect to login page
+        response.sendRedirect("login.do");
     }
 }

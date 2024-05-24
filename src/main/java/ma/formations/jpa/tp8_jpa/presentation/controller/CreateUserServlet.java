@@ -25,10 +25,10 @@ public class CreateUserServlet extends HttpServlet {
 
         User newUser = new User();
         newUser.setUsername(username);
-        newUser.setPassword(password); // No need to encode here
+        newUser.setPassword(password);
 
         service.createUser(newUser);
 
-        response.sendRedirect("login.do"); // Redirect to login page
+        response.sendRedirect("login.do");
     }
 }
